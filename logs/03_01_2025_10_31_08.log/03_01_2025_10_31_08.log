@@ -1,0 +1,26 @@
+2025-03-01 10:31:17,922 - root - INFO - Starting the training pipeline.
+2025-03-01 10:31:17,922 - root - INFO - Enter the data ingestion method or component!
+2025-03-01 10:31:17,926 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\ml_project-0.0.2-py3.10.egg\src\components\data_ingestion.py", line 28, in initiate_data_ingestion
+    df = pd.read_csv(data_file_path)
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\pandas-2.2.3-py3.10-win-amd64.egg\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\pandas-2.2.3-py3.10-win-amd64.egg\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\pandas-2.2.3-py3.10-win-amd64.egg\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\pandas-2.2.3-py3.10-win-amd64.egg\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\pandas-2.2.3-py3.10-win-amd64.egg\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\SHIVAM MISHRA\\anaconda3\\envs\\mlprj\\lib\\site-packages\\ml_project-0.0.2-py3.10.egg\\src\\components\\data\\stud.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Interview\PWC\MLOps\mlops_final\mlprj\src\pipeline\train_pipeline.py", line 12, in train_pipeline
+    train_data_path, test_data_path = data_ingestion.initiate_data_ingestion()
+  File "C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\ml_project-0.0.2-py3.10.egg\src\components\data_ingestion.py", line 46, in initiate_data_ingestion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\SHIVAM MISHRA\anaconda3\envs\mlprj\lib\site-packages\ml_project-0.0.2-py3.10.egg\src\components\data_ingestion.py] line number [28] error message [[Errno 2] No such file or directory: 'C:\\Users\\SHIVAM MISHRA\\anaconda3\\envs\\mlprj\\lib\\site-packages\\ml_project-0.0.2-py3.10.egg\\src\\components\\data\\stud.csv']

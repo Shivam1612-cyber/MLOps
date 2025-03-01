@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/225826910561677610/db54851cb103433b917668aa4af68f84/artifacts
+end_time: 1740806031405
+entry_point_name: ''
+experiment_id: '225826910561677610'
+lifecycle_stage: active
+run_id: db54851cb103433b917668aa4af68f84
+run_name: AdaBoost Regressor_20250301_104351
+run_uuid: db54851cb103433b917668aa4af68f84
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740806031322
+status: 3
+tags: []
+user_id: SHIVAM MISHRA

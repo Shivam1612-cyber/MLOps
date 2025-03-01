@@ -1,0 +1,29 @@
+2025-01-02 00:54:36,141 - root - INFO - Starting the training pipeline.
+2025-01-02 00:54:36,141 - root - INFO - Enter the data ingestion method or component!
+2025-01-02 00:54:36,156 - root - INFO - Read the dataset as dataframe!
+2025-01-02 00:54:36,156 - root - INFO - Train Test Split Initiated!
+2025-01-02 00:54:36,156 - root - INFO - Ingestion of data is completed!
+2025-01-02 00:54:36,156 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-02 00:54:36,172 - root - INFO - Read train and test data completed
+2025-01-02 00:54:36,172 - root - INFO - Obtaining preprocessing object
+2025-01-02 00:54:36,172 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-02 00:54:36,250 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-02 00:54:36,250 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2025-01-02 00:54:36,281 - root - INFO - Saved preprocessing object.
+2025-01-02 00:54:36,281 - root - INFO - Data transformation completed.
+2025-01-02 00:54:38,365 - root - INFO - Split training and test input data
+2025-01-02 00:55:07,806 - root - INFO - Best found model on both training and testing dataset
+2025-01-02 00:55:12,205 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 130, in initiate_model_trainer
+    f"runs:/{mlflow.active_run().info.run_id}/best_model",
+AttributeError: 'NoneType' object has no attribute 'info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 22, in train_pipeline
+    best_model_name, r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 149, in initiate_model_trainer
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\model_trainer.py] line number [130] error message ['NoneType' object has no attribute 'info']

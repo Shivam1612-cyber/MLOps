@@ -1,0 +1,17 @@
+2024-12-28 11:45:49,084 - root - INFO - Starting the training pipeline.
+2024-12-28 11:45:49,085 - root - INFO - Enter the data ingestion method or component!
+2024-12-28 11:45:49,097 - root - INFO - Read the dataset as dataframe!
+2024-12-28 11:45:49,126 - root - INFO - Train Test Split Initiated!
+2024-12-28 11:45:49,153 - root - INFO - Ingestion of data is completed!
+2024-12-28 11:45:49,153 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2024-12-28 11:45:49,216 - root - INFO - Read train and test data completed
+2024-12-28 11:45:49,217 - root - INFO - Obtaining preprocessing object
+2024-12-28 11:45:49,217 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2024-12-28 11:45:49,217 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2024-12-28 11:45:49,219 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2024-12-28 11:45:49,244 - root - INFO - Saved preprocessing object.
+2024-12-28 11:45:49,246 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 17, in train_pipeline
+    train_array, test_array = data_transformation.initiate_data_transformation(train_data_path, test_data_path)
+ValueError: too many values to unpack (expected 2)

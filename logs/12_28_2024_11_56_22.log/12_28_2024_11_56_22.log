@@ -1,0 +1,73 @@
+2024-12-28 11:56:23,836 - root - INFO - Starting the training pipeline.
+2024-12-28 11:56:23,836 - root - INFO - Enter the data ingestion method or component!
+2024-12-28 11:56:23,843 - root - INFO - Read the dataset as dataframe!
+2024-12-28 11:56:23,843 - root - INFO - Train Test Split Initiated!
+2024-12-28 11:56:23,852 - root - INFO - Ingestion of data is completed!
+2024-12-28 11:56:23,852 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2024-12-28 11:56:23,871 - root - INFO - Read train and test data completed
+2024-12-28 11:56:23,871 - root - INFO - Obtaining preprocessing object
+2024-12-28 11:56:23,871 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2024-12-28 11:56:23,871 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2024-12-28 11:56:23,871 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2024-12-28 11:56:23,891 - root - INFO - Saved preprocessing object.
+2024-12-28 11:56:23,892 - root - INFO - Data transformation completed.
+2024-12-28 11:56:23,892 - root - INFO - Split training and test input data
+2024-12-28 11:56:23,921 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\utils.py", line 33, in evaluate_models
+    gs.fit(X_train,y_train)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\sklearn\model_selection\_search.py", line 1023, in fit
+    self._run_search(evaluate_candidates)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\sklearn\model_selection\_search.py", line 1570, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\sklearn\model_selection\_search.py", line 969, in evaluate_candidates
+    out = parallel(
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\parallel.py", line 2005, in __call__
+    next(output)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\parallel.py", line 1643, in _get_outputs
+    self._start(iterator, pre_dispatch)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\parallel.py", line 1626, in _start
+    if self.dispatch_one_batch(iterator):
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\parallel.py", line 1517, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\parallel.py", line 1418, in _dispatch
+    job = self._backend.apply_async(batch, callback=batch_tracker)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\_parallel_backends.py", line 588, in apply_async
+    future = self._workers.submit(func)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 225, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\process_executor.py", line 1248, in submit
+    self._ensure_executor_running()
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\process_executor.py", line 1220, in _ensure_executor_running
+    self._adjust_process_count()
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\process_executor.py", line 1209, in _adjust_process_count
+    p.start()
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\backend\process.py", line 45, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\prakhar\anaconda\envs\mlop_1\lib\site-packages\joblib\externals\loky\backend\popen_loky_win32.py", line 86, in __init__
+    hp, ht, pid, _ = _winapi.CreateProcess(
+PermissionError: [WinError 5] Access is denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 87, in initiate_model_trainer
+    model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
+  File "e:\praxis-learning\mlproject\src\utils.py", line 49, in evaluate_models
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\utils.py] line number [33] error message [[WinError 5] Access is denied]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 22, in train_pipeline
+    best_model_name, r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 119, in initiate_model_trainer
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\model_trainer.py] line number [87] error message [Error occurred in python script name [e:\praxis-learning\mlproject\src\utils.py] line number [33] error message [[WinError 5] Access is denied]]

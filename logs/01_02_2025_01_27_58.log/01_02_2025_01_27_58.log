@@ -1,0 +1,7 @@
+2025-01-02 01:27:58,665 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 01:27:58,680 - werkzeug - INFO -  * Debugger PIN: 827-891-845
+2025-01-02 01:28:10,744 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 01:28:10] "GET / HTTP/1.1" 200 -
+2025-01-02 01:28:10,846 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 01:28:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 01:28:12,606 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 01:28:12] "GET /predictdata HTTP/1.1" 200 -
+2025-01-02 01:29:00,628 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 01:29:00] "POST /predictdata HTTP/1.1" 200 -
+2025-01-02 01:29:25,052 - werkzeug - INFO -  * Detected change in 'e:\\praxis-learning\\mlproject\\app_fastapi.py', reloading

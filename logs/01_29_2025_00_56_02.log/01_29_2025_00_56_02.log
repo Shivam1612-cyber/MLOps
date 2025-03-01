@@ -1,0 +1,32 @@
+2025-01-29 00:56:06,841 - root - INFO - Starting the training pipeline.
+2025-01-29 00:56:06,841 - root - INFO - Enter the data ingestion method or component!
+2025-01-29 00:56:06,919 - root - INFO - Read the dataset as dataframe!
+2025-01-29 00:56:06,951 - root - INFO - Train Test Split Initiated!
+2025-01-29 00:56:07,013 - root - INFO - Ingestion of data is completed!
+2025-01-29 00:56:07,013 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-29 00:56:07,045 - root - INFO - Read train and test data completed
+2025-01-29 00:56:07,045 - root - INFO - Obtaining preprocessing object
+2025-01-29 00:56:07,045 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-29 00:56:07,045 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-29 00:56:07,045 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\data_transformation.py", line 91, in initiate_data_transformation
+    input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\core\frame.py", line 5581, in drop
+    return super().drop(
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\core\generic.py", line 4788, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\core\generic.py", line 4830, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\core\indexes\base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['maths'] not found in axis"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 17, in train_pipeline
+    train_array, test_array,_ = data_transformation.initiate_data_transformation(train_data_path, test_data_path)
+  File "e:\praxis-learning\mlproject\src\components\data_transformation.py", line 124, in initiate_data_transformation
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\data_transformation.py] line number [91] error message ["['maths'] not found in axis"]

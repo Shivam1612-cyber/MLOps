@@ -1,0 +1,47 @@
+2025-01-02 01:09:59,832 - root - INFO - Starting the training pipeline.
+2025-01-02 01:09:59,832 - root - INFO - Enter the data ingestion method or component!
+2025-01-02 01:09:59,836 - root - INFO - Read the dataset as dataframe!
+2025-01-02 01:09:59,839 - root - INFO - Train Test Split Initiated!
+2025-01-02 01:09:59,839 - root - INFO - Ingestion of data is completed!
+2025-01-02 01:09:59,839 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-02 01:09:59,855 - root - INFO - Read train and test data completed
+2025-01-02 01:09:59,855 - root - INFO - Obtaining preprocessing object
+2025-01-02 01:09:59,855 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-02 01:09:59,855 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-02 01:09:59,855 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2025-01-02 01:09:59,870 - root - INFO - Saved preprocessing object.
+2025-01-02 01:09:59,870 - root - INFO - Data transformation completed.
+2025-01-02 01:10:01,942 - root - INFO - Split training and test input data
+2025-01-02 01:10:07,489 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\utils.py", line 33, in evaluate_models
+    gs.fit(X_train,y_train)
+  File "C:\Users\prakhar\anaconda\envs\mlops\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\prakhar\anaconda\envs\mlops\lib\site-packages\sklearn\model_selection\_search.py", line 932, in fit
+    cv_orig = check_cv(self.cv, y, classifier=is_classifier(estimator))
+  File "C:\Users\prakhar\anaconda\envs\mlops\lib\site-packages\sklearn\base.py", line 1237, in is_classifier
+    return get_tags(estimator).estimator_type == "classifier"
+  File "C:\Users\prakhar\anaconda\envs\mlops\lib\site-packages\sklearn\utils\_tags.py", line 405, in get_tags
+    sklearn_tags_provider[klass] = klass.__sklearn_tags__(estimator)  # type: ignore[attr-defined]
+  File "C:\Users\prakhar\anaconda\envs\mlops\lib\site-packages\sklearn\base.py", line 540, in __sklearn_tags__
+    tags = super().__sklearn_tags__()
+AttributeError: 'super' object has no attribute '__sklearn_tags__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 72, in initiate_model_trainer
+    model_report: dict = evaluate_models(
+  File "e:\praxis-learning\mlproject\src\utils.py", line 49, in evaluate_models
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\utils.py] line number [33] error message ['super' object has no attribute '__sklearn_tags__']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 22, in train_pipeline
+    best_model_name, r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 151, in initiate_model_trainer
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\model_trainer.py] line number [72] error message [Error occurred in python script name [e:\praxis-learning\mlproject\src\utils.py] line number [33] error message ['super' object has no attribute '__sklearn_tags__']]

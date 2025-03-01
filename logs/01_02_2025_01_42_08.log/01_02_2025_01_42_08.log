@@ -1,0 +1,24 @@
+2025-01-02 01:42:08,606 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-02 01:42:08,606 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-02 01:42:08,606 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:44:06,294 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:44:11,438 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:45:04,543 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:45:07,498 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:24,737 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:36,068 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:38,652 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:44,433 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:49,479 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:53,293 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:57,115 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:46:59,750 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:47:41,169 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:18,421 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:25,369 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:36,604 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:41,346 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:49,590 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:50:58,683 - werkzeug - INFO -  * Restarting with stat
+2025-01-02 01:51:25,174 - werkzeug - INFO -  * Restarting with stat

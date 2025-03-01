@@ -1,0 +1,23 @@
+2025-01-29 01:05:11,877 - root - INFO - Starting the training pipeline.
+2025-01-29 01:05:11,877 - root - INFO - Step 1: Starting Data Ingestion...
+2025-01-29 01:05:11,877 - root - INFO - Enter the data ingestion method or component!
+2025-01-29 01:05:11,894 - root - INFO - Read the dataset as dataframe!
+2025-01-29 01:05:11,926 - root - INFO - Train Test Split Initiated!
+2025-01-29 01:05:11,972 - root - INFO - Ingestion of data is completed!
+2025-01-29 01:05:11,972 - root - INFO - Step 1 Completed: Data ingestion completed. Train data path: artifacts\train.csv
+2025-01-29 01:05:11,988 - root - INFO - Step 2: Loading synthetic data for drift check...
+2025-01-29 01:05:11,988 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\components\model_drift.py", line 58, in train_pipeline
+    new_data = pd.read_csv(drift_file_path)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\prakhar\anaconda\envs\final_run\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Praxis-Learning\\mlproject\\src\\components\\data\\new_data.csv'

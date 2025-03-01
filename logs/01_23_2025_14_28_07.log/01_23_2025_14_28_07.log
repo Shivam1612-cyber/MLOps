@@ -1,0 +1,16 @@
+2025-01-23 14:28:08,015 - werkzeug - WARNING -  * Debugger is active!
+2025-01-23 14:28:08,031 - werkzeug - INFO -  * Debugger PIN: 167-906-132
+2025-01-23 14:28:38,515 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\numpy\\_typing\\_nbit.py', reloading
+2025-01-23 14:28:38,604 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\__init__.py', reloading
+2025-01-23 14:28:38,612 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_base.py', reloading
+2025-01-23 14:28:38,689 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_csr.py', reloading
+2025-01-23 14:28:38,701 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_csc.py', reloading
+2025-01-23 14:28:38,708 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_lil.py', reloading
+2025-01-23 14:28:38,737 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_dok.py', reloading
+2025-01-23 14:28:38,771 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_coo.py', reloading
+2025-01-23 14:28:38,786 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_dia.py', reloading
+2025-01-23 14:28:38,795 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_bsr.py', reloading
+2025-01-23 14:28:38,816 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_construct.py', reloading
+2025-01-23 14:28:38,843 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_extract.py', reloading
+2025-01-23 14:28:38,845 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_matrix_io.py', reloading
+2025-01-23 14:28:38,848 - werkzeug - INFO -  * Detected change in 'C:\\Users\\prakhar\\anaconda\\envs\\mlops\\Lib\\site-packages\\scipy\\sparse\\_matrix.py', reloading

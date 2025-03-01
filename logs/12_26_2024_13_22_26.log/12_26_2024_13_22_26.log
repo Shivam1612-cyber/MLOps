@@ -1,0 +1,5 @@
+2024-12-26 13:22:26,352 - werkzeug - WARNING -  * Debugger is active!
+2024-12-26 13:22:26,355 - werkzeug - INFO -  * Debugger PIN: 875-723-557
+2024-12-26 13:22:29,217 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2024 13:22:29] "POST /predictdata HTTP/1.1" 200 -
+2024-12-26 13:22:38,214 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2024 13:22:38] "GET / HTTP/1.1" 200 -
+2024-12-26 13:22:40,811 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2024 13:22:40] "GET /predictdata HTTP/1.1" 200 -

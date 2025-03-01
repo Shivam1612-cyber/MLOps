@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/225826910561677610/4874b06b0f984054a280dd32e498fe9f/artifacts
+end_time: 1740806030600
+entry_point_name: ''
+experiment_id: '225826910561677610'
+lifecycle_stage: active
+run_id: 4874b06b0f984054a280dd32e498fe9f
+run_name: Random Forest_20250301_104348
+run_uuid: 4874b06b0f984054a280dd32e498fe9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740806028347
+status: 3
+tags: []
+user_id: SHIVAM MISHRA

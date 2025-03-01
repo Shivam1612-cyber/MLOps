@@ -1,0 +1,6 @@
+2025-01-02 00:45:17,350 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 00:45:17,367 - werkzeug - INFO -  * Debugger PIN: 827-891-845
+2025-01-02 00:46:06,588 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 00:46:06] "GET / HTTP/1.1" 200 -
+2025-01-02 00:46:06,666 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 00:46:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-02 00:46:08,448 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 00:46:08] "GET /predictdata HTTP/1.1" 200 -
+2025-01-02 00:46:25,685 - werkzeug - INFO - 127.0.0.1 - - [02/Jan/2025 00:46:25] "POST /predictdata HTTP/1.1" 200 -

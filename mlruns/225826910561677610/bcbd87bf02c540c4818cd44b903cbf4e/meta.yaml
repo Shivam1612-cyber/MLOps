@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/225826910561677610/bcbd87bf02c540c4818cd44b903cbf4e/artifacts
+end_time: 1740806030975
+entry_point_name: ''
+experiment_id: '225826910561677610'
+lifecycle_stage: active
+run_id: bcbd87bf02c540c4818cd44b903cbf4e
+run_name: Gradient Boosting_20250301_104350
+run_uuid: bcbd87bf02c540c4818cd44b903cbf4e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740806030793
+status: 3
+tags: []
+user_id: SHIVAM MISHRA

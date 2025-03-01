@@ -1,0 +1,51 @@
+2025-01-29 00:26:44,566 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-29 00:26:48,207 - root - INFO - Starting the training pipeline.
+2025-01-29 00:26:48,207 - root - INFO - Enter the data ingestion method or component!
+2025-01-29 00:26:48,222 - root - INFO - Read the dataset as dataframe!
+2025-01-29 00:26:48,226 - root - INFO - Train Test Split Initiated!
+2025-01-29 00:26:48,231 - root - INFO - Ingestion of data is completed!
+2025-01-29 00:26:48,231 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-29 00:26:48,236 - root - INFO - Read train and test data completed
+2025-01-29 00:26:48,236 - root - INFO - Obtaining preprocessing object
+2025-01-29 00:26:48,236 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-29 00:26:48,236 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-29 00:26:48,236 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2025-01-29 00:26:48,252 - root - INFO - Saved preprocessing object.
+2025-01-29 00:26:48,252 - root - INFO - Data transformation completed.
+2025-01-29 00:26:50,361 - root - INFO - Split training and test input data
+2025-01-29 00:27:26,413 - root - INFO - Best found model on both training and testing dataset
+2025-01-29 00:27:26,577 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 117, in initiate_model_trainer
+    mlflow.sklearn.log_model(best_model, "best_model")
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\sklearn\__init__.py", line 413, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\models\model.py", line 776, in log
+    flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\sklearn\__init__.py", line 302, in save_model
+    default_reqs = get_default_pip_requirements(include_cloudpickle)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\sklearn\__init__.py", line 141, in get_default_pip_requirements
+    pip_deps = [_get_pinned_requirement("scikit-learn", module="sklearn")]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\utils\requirements_utils.py", line 608, in _get_pinned_requirement
+    local_version_label = _get_local_version_label(version_raw)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\utils\requirements_utils.py", line 565, in _get_local_version_label
+    return Version(version).local
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\packaging\version.py", line 198, in __init__
+    match = self._regex.search(version)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 22, in train_pipeline
+    best_model_name, r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 138, in initiate_model_trainer
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\model_trainer.py] line number [117] error message [expected string or bytes-like object, got 'NoneType']

@@ -1,0 +1,15 @@
+2025-01-29 00:04:38,076 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-29 00:04:41,061 - root - INFO - Starting the training pipeline.
+2025-01-29 00:04:41,061 - root - INFO - Enter the data ingestion method or component!
+2025-01-29 00:04:41,077 - root - INFO - Read the dataset as dataframe!
+2025-01-29 00:04:41,108 - root - INFO - Train Test Split Initiated!
+2025-01-29 00:04:41,156 - root - INFO - Ingestion of data is completed!
+2025-01-29 00:04:41,156 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-29 00:04:41,187 - root - INFO - Read train and test data completed
+2025-01-29 00:04:41,187 - root - INFO - Obtaining preprocessing object
+2025-01-29 00:04:41,187 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-29 00:04:41,187 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-29 00:04:41,187 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2025-01-29 00:04:41,234 - root - INFO - Saved preprocessing object.
+2025-01-29 00:04:41,234 - root - INFO - Data transformation completed.
+2025-01-29 00:04:43,335 - root - INFO - Split training and test input data

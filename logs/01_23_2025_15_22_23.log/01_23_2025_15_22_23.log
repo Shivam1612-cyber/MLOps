@@ -1,0 +1,34 @@
+2025-01-23 15:22:24,374 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-01-23 15:22:28,591 - root - INFO - Starting the training pipeline.
+2025-01-23 15:22:28,591 - root - INFO - Enter the data ingestion method or component!
+2025-01-23 15:22:28,607 - root - INFO - Read the dataset as dataframe!
+2025-01-23 15:22:28,607 - root - INFO - Train Test Split Initiated!
+2025-01-23 15:22:28,622 - root - INFO - Ingestion of data is completed!
+2025-01-23 15:22:28,622 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2025-01-23 15:22:37,759 - root - INFO - Starting an MLflow run.
+2025-01-23 15:22:37,759 - root - INFO - Read train and test data completed
+2025-01-23 15:22:37,759 - root - INFO - Obtaining preprocessing object
+2025-01-23 15:22:37,759 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-01-23 15:22:37,759 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2025-01-23 15:22:37,774 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2025-01-23 15:22:37,790 - root - INFO - Saved preprocessing object.
+2025-01-23 15:22:37,790 - root - INFO - Data transformation completed.
+2025-01-23 15:22:37,806 - root - INFO - Split training and test input data
+2025-01-23 15:23:15,382 - root - ERROR - Error occurred in the training pipeline.
+Traceback (most recent call last):
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 84, in initiate_model_trainer
+    with mlflow.start_run(run_name=run_name):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prakhar\anaconda\Lib\site-packages\mlflow\tracking\fluent.py", line 344, in start_run
+    raise Exception(
+Exception: Run with UUID ac80b00ef620480f960fe23670c575ca is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Praxis-Learning\mlproject\src\pipeline\train_pipeline.py", line 30, in train_pipeline
+    best_model_name, r2_square = model_trainer.initiate_model_trainer(train_array, test_array)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\praxis-learning\mlproject\src\components\model_trainer.py", line 138, in initiate_model_trainer
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [e:\praxis-learning\mlproject\src\components\model_trainer.py] line number [84] error message [Run with UUID ac80b00ef620480f960fe23670c575ca is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True]

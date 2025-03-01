@@ -1,0 +1,17 @@
+2024-12-28 11:56:38,361 - root - INFO - Starting the training pipeline.
+2024-12-28 11:56:38,370 - root - INFO - Enter the data ingestion method or component!
+2024-12-28 11:56:38,372 - root - INFO - Read the dataset as dataframe!
+2024-12-28 11:56:38,376 - root - INFO - Train Test Split Initiated!
+2024-12-28 11:56:38,384 - root - INFO - Ingestion of data is completed!
+2024-12-28 11:56:38,384 - root - INFO - Data ingestion completed. Train data path: artifacts\train.csv, Test data path: artifacts\test.csv
+2024-12-28 11:56:38,401 - root - INFO - Read train and test data completed
+2024-12-28 11:56:38,401 - root - INFO - Obtaining preprocessing object
+2024-12-28 11:56:38,401 - root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2024-12-28 11:56:38,401 - root - INFO - Numerical columns: ['writing_score', 'reading_score']
+2024-12-28 11:56:38,407 - root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+2024-12-28 11:56:38,423 - root - INFO - Saved preprocessing object.
+2024-12-28 11:56:38,423 - root - INFO - Data transformation completed.
+2024-12-28 11:56:38,423 - root - INFO - Split training and test input data
+2024-12-28 11:57:18,024 - root - INFO - Best found model on both training and testing dataset
+2024-12-28 11:57:18,030 - root - INFO - Model training completed. Best model: Linear Regression, R2 Score: 0.8804332983749565
+2024-12-28 11:57:18,030 - root - INFO - Training pipeline completed successfully.

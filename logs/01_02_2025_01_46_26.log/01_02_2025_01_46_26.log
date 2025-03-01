@@ -1,0 +1,3 @@
+2025-01-02 01:46:26,117 - werkzeug - WARNING -  * Debugger is active!
+2025-01-02 01:46:26,117 - werkzeug - INFO -  * Debugger PIN: 827-891-845
+2025-01-02 01:46:35,935 - werkzeug - INFO -  * Detected change in 'E:\\Praxis-Learning\\mlproject\\app_fastapi.py', reloading

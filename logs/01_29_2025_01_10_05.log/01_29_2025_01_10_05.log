@@ -1,0 +1,13 @@
+2025-01-29 01:10:07,871 - root - INFO - Starting the training pipeline.
+2025-01-29 01:10:07,871 - root - INFO - Step 1: Starting Data Ingestion...
+2025-01-29 01:10:07,871 - root - INFO - Enter the data ingestion method or component!
+2025-01-29 01:10:07,902 - root - INFO - Read the dataset as dataframe!
+2025-01-29 01:10:07,933 - root - INFO - Train Test Split Initiated!
+2025-01-29 01:10:07,965 - root - INFO - Ingestion of data is completed!
+2025-01-29 01:10:07,965 - root - INFO - Step 1 Completed: Data ingestion completed. Train data path: artifacts\train.csv
+2025-01-29 01:10:07,996 - root - INFO - Step 3: Checking for drift...
+2025-01-29 01:10:07,996 - root - INFO - Train data mean: 68.1642, New data mean: 49.3935
+2025-01-29 01:10:07,996 - root - INFO - Percentage change in mean: 27.54%
+2025-01-29 01:10:07,996 - root - INFO - No significant drift detected in data.
+2025-01-29 01:10:07,996 - root - INFO - No significant data drift detected. Proceeding as usual.
+2025-01-29 01:10:07,996 - root - INFO - Training pipeline completed successfully.
